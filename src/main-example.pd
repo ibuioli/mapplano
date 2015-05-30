@@ -1,0 +1,8 @@
+#N canvas 62 19 521 547 10;
+#X obj 27 117 mapplano;
+#X obj 27 12 gemhead;
+#X obj 27 41 pix_video;
+#X obj 27 65 pix_texture;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 0 0;

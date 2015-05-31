@@ -1,4 +1,4 @@
-#N canvas 181 87 1059 543 10;
+#N canvas 103 65 1059 543 10;
 #X obj 359 306 pack;
 #X msg 393 289 bang;
 #X obj 463 459 pack;
@@ -8,17 +8,16 @@
 #X msg 498 289 bang;
 #X obj 359 459 pack;
 #X msg 393 442 bang;
-#N canvas 0 0 396 384 reader 0;
-#X obj 153 214 tabread \$0-settings;
+#N canvas 266 46 396 384 reader 0;
+#X obj 147 214 tabread \$0-settings;
 #X obj 107 -11 inlet;
 #X obj 107 11 * 8;
 #X msg 107 68 0;
-#X text 141 -14 get the index of setting 0 - 49;
 #X obj 107 99 f;
 #X obj 107 37 t b f;
-#X obj 153 181 +;
+#X obj 147 183 +;
 #X obj 107 134 moses 8;
-#X obj 59 70 + 1;
+#X obj 59 82 + 1;
 #X obj 126 244 pack;
 #X obj 126 279 route 0 1 2 3 4 5 6 7;
 #X obj 12 321 outlet;
@@ -30,30 +29,30 @@
 #X obj 275 321 outlet;
 #X obj 318 321 outlet;
 #X obj 107 159 t f f f;
-#X connect 0 0 10 1;
+#X connect 0 0 9 1;
 #X connect 1 0 2 0;
-#X connect 2 0 6 0;
-#X connect 3 0 5 0;
-#X connect 5 0 8 0;
-#X connect 6 0 3 0;
-#X connect 6 1 7 1;
-#X connect 7 0 0 0;
-#X connect 8 0 20 0;
-#X connect 9 0 5 0;
+#X connect 2 0 5 0;
+#X connect 3 0 4 0;
+#X connect 4 0 7 0;
+#X connect 5 0 3 0;
+#X connect 5 1 6 1;
+#X connect 6 0 0 0;
+#X connect 7 0 19 0;
+#X connect 8 0 4 0;
+#X connect 9 0 10 0;
 #X connect 10 0 11 0;
-#X connect 11 0 12 0;
-#X connect 11 1 13 0;
-#X connect 11 2 14 0;
-#X connect 11 3 15 0;
-#X connect 11 4 16 0;
-#X connect 11 5 17 0;
-#X connect 11 6 18 0;
-#X connect 11 7 19 0;
-#X connect 20 0 9 0;
-#X connect 20 1 10 0;
-#X connect 20 2 7 0;
+#X connect 10 1 12 0;
+#X connect 10 2 13 0;
+#X connect 10 3 14 0;
+#X connect 10 4 15 0;
+#X connect 10 5 16 0;
+#X connect 10 6 17 0;
+#X connect 10 7 18 0;
+#X connect 19 0 8 0;
+#X connect 19 1 9 0;
+#X connect 19 2 6 0;
 #X restore 805 67 pd reader --------;
-#N canvas 212 81 578 352 writer 0;
+#N canvas 72 127 575 313 writer 0;
 #X obj 17 9 inlet;
 #X obj 64 9 inlet;
 #X obj 106 9 inlet;
@@ -92,10 +91,11 @@
 #X obj 362 235 * 8;
 #X obj 402 9 inlet;
 #X obj 402 40 t b b;
-#X text 404 173 store the abstaction with;
-#X text 404 185 the data on harddisk;
 #X msg 402 142 \; pd-mapplano.pd menusave;
+#X obj 38 36 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X connect 0 0 27 1;
+#X connect 0 0 39 0;
 #X connect 1 0 28 1;
 #X connect 2 0 29 1;
 #X connect 3 0 30 1;
@@ -139,7 +139,7 @@
 #X connect 34 0 19 0;
 #X connect 35 0 10 1;
 #X connect 36 0 37 0;
-#X connect 37 0 40 0;
+#X connect 37 0 38 0;
 #X connect 37 1 34 0;
 #X connect 37 1 33 0;
 #X connect 37 1 32 0;
@@ -152,7 +152,7 @@
 #N canvas 107 162 446 215 storage 0;
 #N canvas 172 35 450 300 (subpatch) 0;
 #X array \$0-settings 400 float 3;
-#A 0 0 0 0 0 0 0 0 0 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333
+#A 0 -5 -5 5 -5 5 5 -5 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.0333333
 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333
 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333
 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333
@@ -168,9 +168,7 @@
 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333
 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333
 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333
--0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333
--0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333
--0.0333333 -0.0333333 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+-0.0333333 -0.0333333 -0.0333333 -0.0333333 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -178,10 +176,10 @@
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0;
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 #X coords 0 10 400 -10 400 140 1 0 0;
 #X restore 14 26 graph;
-#X restore 707 320 pd storage;
+#X restore 707 330 pd storage;
 #X obj 805 52 f;
 #X obj 124 -10 gemhead;
 #X obj -81 103 spigot;
@@ -219,21 +217,21 @@
 #X obj 235 29 bng 15 250 50 0 empty \$0-reset empty 17 7 0 10 -262144
 -1 -1;
 #X floatatom 359 266 5 0 0 0 - #0-aiX -;
-#X floatatom 637 257 5 0 0 0 - aiX -;
+#X floatatom 637 257 5 0 0 0 - #0-aiX -;
 #X floatatom 393 266 5 0 0 0 - #0-aiY -;
-#X floatatom 637 239 5 0 0 0 - aiY -;
-#X floatatom 669 257 5 0 0 0 - adX -;
-#X floatatom 669 239 5 0 0 0 - adY -;
+#X floatatom 637 239 5 0 0 0 - #0-aiY -;
+#X floatatom 669 257 5 0 0 0 - #0-adX -;
+#X floatatom 669 239 5 0 0 0 - #0-adY -;
 #X floatatom 463 266 5 0 0 0 - #0-adX -;
 #X floatatom 498 266 5 0 0 0 - #0-adY -;
-#X floatatom 701 257 5 0 0 0 - abdX -;
-#X floatatom 701 239 5 0 0 0 - abdY -;
+#X floatatom 701 257 5 0 0 0 - #0-abdX -;
+#X floatatom 701 239 5 0 0 0 - #0-abdY -;
 #X floatatom 463 421 5 0 0 0 - #0-abdX -;
 #X floatatom 496 421 5 0 0 0 - #0-abdY -;
 #X floatatom 359 422 5 0 0 0 - #0-abiX -;
 #X floatatom 393 422 5 0 0 0 - #0-abiY -;
-#X floatatom 733 257 5 0 0 0 - abiX -;
-#X floatatom 733 239 5 0 0 0 - abiY -;
+#X floatatom 733 257 5 0 0 0 - #0-abiX -;
+#X floatatom 733 239 5 0 0 0 - #0-abiY -;
 #X obj 350 10 cnv 15 450 200 empty empty empty 20 12 0 14 -199729 -66577
 0;
 #X obj 515 19 cnv 15 220 180 empty empty empty 20 12 0 14 -170602 -66577
@@ -277,10 +275,10 @@
 -1;
 #X text 756 17 cargar;
 #X text 752 69 guardar;
-#X obj 549 130 grid grid1 40 -5 5 40 -5 5 1 0.1 0.1 5 5 205 265;
-#X obj 656 130 grid grid1 40 -5 5 40 -5 5 1 0.1 0.1 5 5 350 271;
-#X obj 656 42 grid grid1 40 -5 5 40 -5 5 1 0.1 0.1 5 5 350 165;
-#X obj 549 42 grid grid1 40 -5 5 40 -5 5 1 0.1 0.1 5 5 219 170;
+#X obj 549 130 grid grid1 40 -5 5 40 -5 5 1 0.1 0.1 5 5 527 186;
+#X obj 656 130 grid grid1 40 -5 5 40 -5 5 1 0.1 0.1 5 5 724 196;
+#X obj 656 42 grid grid1 40 -5 5 40 -5 5 1 0.1 0.1 5 5 726 22;
+#X obj 549 42 grid grid1 40 -5 5 40 -5 5 1 0.1 0.1 5 5 504 -11;
 #X text 523 23 Arriba Izquierda;
 #X text 635 23 Arriba Derecha;
 #X text 524 110 Abajo Izquierda;

@@ -1,4 +1,4 @@
-#N canvas 116 79 1059 543 10;
+#N canvas 181 87 1059 543 10;
 #X obj 359 306 pack;
 #X msg 393 289 bang;
 #X obj 463 459 pack;
@@ -53,7 +53,7 @@
 #X connect 20 1 10 0;
 #X connect 20 2 7 0;
 #X restore 805 67 pd reader --------;
-#N canvas 72 99 528 311 writer 0;
+#N canvas 212 81 578 352 writer 0;
 #X obj 17 9 inlet;
 #X obj 64 9 inlet;
 #X obj 106 9 inlet;
@@ -62,39 +62,39 @@
 #X obj 231 9 inlet;
 #X obj 273 8 inlet;
 #X obj 310 8 inlet;
-#X msg 44 92 0;
-#X obj 17 68 t f b;
-#X obj 181 241 +;
-#X obj 442 23 inlet;
-#X obj 64 70 t f b;
-#X msg 91 94 1;
-#X obj 106 69 t f b;
-#X obj 143 69 t f b;
-#X obj 184 67 t f b;
-#X obj 231 69 t f b;
-#X obj 273 68 t f b;
-#X obj 310 68 t f b;
-#X msg 133 94 2;
-#X msg 170 93 3;
-#X msg 211 91 4;
-#X msg 258 93 5;
-#X msg 300 92 6;
-#X msg 337 92 7;
-#X obj 64 269 tabwrite \$0-settings;
-#X obj 16 40 f;
-#X obj 64 40 f;
-#X obj 106 40 f;
-#X obj 150 40 f;
-#X obj 184 40 f;
-#X obj 231 40 f;
-#X obj 273 40 f;
-#X obj 310 40 f;
-#X obj 336 171 * 8;
-#X obj 486 22 inlet;
-#X obj 486 50 t b b;
-#X msg 382 142 \; pd-b4plane.pd menusave;
-#X text 384 173 store the abstaction with;
-#X text 384 185 the data on harddisk;
+#X msg 44 112 0;
+#X obj 17 88 t f b;
+#X obj 161 252 +;
+#X obj 362 7 inlet;
+#X obj 64 90 t f b;
+#X msg 91 114 1;
+#X obj 106 89 t f b;
+#X obj 143 89 t f b;
+#X obj 184 87 t f b;
+#X obj 231 89 t f b;
+#X obj 273 88 t f b;
+#X obj 310 88 t f b;
+#X msg 133 114 2;
+#X msg 170 113 3;
+#X msg 211 111 4;
+#X msg 258 113 5;
+#X msg 300 112 6;
+#X msg 337 112 7;
+#X obj 17 269 tabwrite \$0-settings;
+#X obj 16 57 f;
+#X obj 64 57 f;
+#X obj 106 57 f;
+#X obj 150 57 f;
+#X obj 184 57 f;
+#X obj 231 57 f;
+#X obj 273 57 f;
+#X obj 310 57 f;
+#X obj 362 235 * 8;
+#X obj 402 9 inlet;
+#X obj 402 40 t b b;
+#X text 404 173 store the abstaction with;
+#X text 404 185 the data on harddisk;
+#X msg 402 142 \; pd-mapplano.pd menusave;
 #X connect 0 0 27 1;
 #X connect 1 0 28 1;
 #X connect 2 0 29 1;
@@ -139,7 +139,7 @@
 #X connect 34 0 19 0;
 #X connect 35 0 10 1;
 #X connect 36 0 37 0;
-#X connect 37 0 38 0;
+#X connect 37 0 40 0;
 #X connect 37 1 34 0;
 #X connect 37 1 33 0;
 #X connect 37 1 32 0;
@@ -152,7 +152,7 @@
 #N canvas 107 162 446 215 storage 0;
 #N canvas 172 35 450 300 (subpatch) 0;
 #X array \$0-settings 400 float 3;
-#A 0 -5 -5 5 -5 5 5 -5 5 -0.0333333 -0.0333333 -0.0333333 -0.0333333
+#A 0 0 0 0 0 0 0 0 0 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333
 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333
 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333
 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333
@@ -170,7 +170,7 @@
 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333
 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333
 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333 -0.0333333
--0.0333333 -0.0333333 -0.0333333 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+-0.0333333 -0.0333333 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -178,11 +178,11 @@
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0;
+0 0 0 0 0;
 #X coords 0 10 400 -10 400 140 1 0 0;
 #X restore 14 26 graph;
 #X restore 707 320 pd storage;
-#X obj 805 45 f;
+#X obj 805 52 f;
 #X obj 124 -10 gemhead;
 #X obj -81 103 spigot;
 #X obj 124 418 spigot;

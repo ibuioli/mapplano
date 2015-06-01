@@ -52,7 +52,7 @@
 #X connect 19 1 9 0;
 #X connect 19 2 6 0;
 #X restore 805 67 pd reader --------;
-#N canvas 72 127 575 313 writer 0;
+#N canvas 72 127 575 313 writer 1;
 #X obj 17 9 inlet;
 #X obj 64 9 inlet;
 #X obj 106 9 inlet;
@@ -92,10 +92,7 @@
 #X obj 402 9 inlet;
 #X obj 402 40 t b b;
 #X msg 402 142 \; pd-mapplano.pd menusave;
-#X obj 38 36 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
 #X connect 0 0 27 1;
-#X connect 0 0 39 0;
 #X connect 1 0 28 1;
 #X connect 2 0 29 1;
 #X connect 3 0 30 1;
